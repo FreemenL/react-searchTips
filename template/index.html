@@ -1,0 +1,88 @@
+<!doctype html>
+<html data-scale="true">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+<div class="todoapp" id="root">
+  <style type="text/css">
+		#preloader{
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    display: block;
+		    transform: translate(-50%,-50%);
+		    display: block;
+		    width: 55px;
+		}
+		#preloader span{
+		    display:block;
+		    bottom:0px;
+		    width: 9px;
+		    height: 5px;
+		    background:#ccc;
+		    position:absolute;
+		    animation: preloader 1.5s  infinite ease-in-out;
+		}
+		 
+		#preloader span:nth-child(2){
+		left:11px;
+		animation-delay: .2s;
+		 
+		}
+		#preloader span:nth-child(3){
+		left:22px;
+		animation-delay: .4s;
+		}
+		#preloader span:nth-child(4){
+		left:33px;
+		animation-delay: .6s;
+		}
+		#preloader span:nth-child(5){
+		left:44px;
+		animation-delay: .8s;
+		}
+		@keyframes preloader {
+		    0% {height:5px;transform:translateY(0px);}
+		    25% {height:30px;transform:translateY(15px);}
+		    50% {height:5px;transform:translateY(0px);}
+		    100% {height:5px;transform:translateY(0px);}
+		}
+		#preloader p{
+			text-align: center;
+		    display: block;
+		    width: 100%;
+		    position: absolute;
+		    height: 20px;
+		    bottom: -40px;
+		    font-size: 12px;
+		    margin: 0 auto;
+		    color: #ccc;
+		}
+  </style>
+	<div id="preloader">
+	     <span></span>
+	     <span></span>
+	     <span></span>
+	     <span></span>
+	     <span></span>
+	     <p>加载中...<p>
+	</div>
+</div>
+  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener('DOMContentLoaded', function() {
+        FastClick.attach(document.body);
+      }, false);
+    }
+    if(!window.Promise) {
+      document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
+    }
+  </script>
+</body>
+</html>
